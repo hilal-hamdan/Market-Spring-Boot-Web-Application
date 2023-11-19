@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.w3.org/1999/xhtml">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" th:href="@{/assets/css/styles.css}" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Playfair+Display:400,700&display=swap">
+
+    <link rel="stylesheet" type="text/css" href="/assets/css/customStyles.css"> <!-- New CSS file for custom styles -->
+    <title>Market</title>
+</head>
+
+
+<body>
+<!-- header -->
+<div th:replace="header :: header"></div>
+<!-- //header -->
+<div class="content">
+<table>
+    <thead>
+    <tr>
+        <th>iPhone Name</th>
+        <th>Processor</th>
+        <th>Released</th>
+        <th>CurrentBid</th>
+        <th>Bid At</th>
+        <th></th>
+        <th></th>
+
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="iphone : ${iphoneList}">
+        <td th:text="${iphone.iphoneName}"></td>
+        <td th:text="${iphone.processor}"></td>
+        <td th:text="${#dates.format(iphone.released, 'yyyy-MM-dd')}"></td>
+        <td class="current-bid" th:text="${iphone.maxBidAmount}"></td>
+        <td th:text="${#temporals.format(iphone.updatedAt, 'yyyy-MM-dd')}"></td>
+        <td>
+            <form th:action="@{'/bids/' + ${iphone.iphoneId}}" method="post">
+                <button class="shop-button" type="submit">Click to Bid</button>
+            </form>
+        </td>
+        <td>
+            <form sec:authorize="hasRole('ROLE_ADMIN')"  th:action="@{/selliphone}" method="post">
+                <input type="hidden" name="iphoneId" th:value="${iphone.iphoneId}" />
+                <button class="shop-button" type="submit">Sell Iphone</button>
+            </form>
+        </td>
+    <tbody>
+    </tr>
+    </tbody>
+    <!-- ... Your previous HTML code ... -->
+
+</table>
+</div>
+<!-- footer -->
+<div th:replace="footer :: footer"></div>
+<!-- //footer -->
+
+
+</body>
+
+</html>

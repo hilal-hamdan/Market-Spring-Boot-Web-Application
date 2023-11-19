@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" th:href="@{/assets/css/styles.css}" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Playfair+Display:400,700&display=swap">
+
+    <link rel="stylesheet" type="text/css" href="/assets/css/customStyles.css"> <!-- New CSS file for custom styles -->
+
+    <title>Market</title>
+</head>
+
+<body>
+<!-- header -->
+<div th:replace="header :: header"></div>
+<!-- //header -->
+
+
+    <h2>"Bid & Win: Own Every iPhone Generation at Your Price!"</h2>
+    <h3>Discover the ultimate iPhone collection at Market – where you're in control! 📱<br><br>
+        Are you a true iPhone enthusiast, looking to own the entire spectrum of iPhone generations?<br>
+        Your dream is just a bid away! With our exclusive bidding system,<br>
+        you can unlock the complete iPhone experience at a price that suits your budget.</h3>
+
+        <h5>All Generations Available: From the original iPhone to the latest iPhone models,<br>
+        we've got them all in one place.</h5>
+    <h5>Bid Your Price: No fixed prices! Set your budget and bid for your favorite iPhone<br>
+        – it's a shopper's paradise.</h5>
+    <h5>Fair & Transparent: Our auction system is designed to ensure fairness and transparency in every bid.<br>
+    </h5>
+    <h5>Quality Guaranteed: Rest assured, every iPhone on our platform is tested and certified for quality and functionality.</h5>
+</div>
+<div>
+<img class="home-img" th:src="@{/assets/images/home-iphone-blue.jpg}" />
+</div>
+<!-- footer -->
+<div th:replace="footer :: footer"></div>
+<!-- //footer -->
+</body>
+
+</html>

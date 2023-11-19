@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" th:href="@{/assets/css/styles.css}"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Playfair+Display:400,700&display=swap">
+
+    <title>Market</title>
+</head>
+<body>
+
+<div id="page-container">
+<div th:replace="header :: header"></div>
+
+<div >
+    <form th:action="@{/login}" method="post">
+
+        <div>
+            <h1>Login</h1>
+            <p>Please enter your login and password!</p>
+
+            <li  role="alert" th:if="${!#strings.isEmpty(message)}"
+                th:text="${message}" />
+
+            <div>
+                <input class="login-input" placeholder="Username" type="text" name="username" id="username"  />
+            </div>
+
+            <div>
+                <input class="login-input" placeholder="Password" type="password" name="password" id="password" />
+            </div>
+
+            <input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}">
+
+            <p><a class="navigation-link" href="#!">Forgot password?</a></p>
+            <p><a class="navigation-link" th:href="@{register}">Register Now!</a></p>
+
+            <button class="login-button" type="submit">Login</button>
+
+        </div>
+
+    </form>
+</div>
+</div>
+<!-- footer -->
+<div th:replace="footer :: footer"></div>
+<!-- //footer -->
+</body>
+</html>

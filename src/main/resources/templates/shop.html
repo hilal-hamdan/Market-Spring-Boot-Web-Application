@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<!-- add script link here -->
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" th:href="@{/assets/css/styles.css}"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Playfair+Display:400,700&display=swap">
+
+    <title>Market</title>
+</head>
+
+<body>
+
+
+<!-- header -->
+<div th:replace="header :: header"></div>
+<!-- //header -->
+<h2 >How it Works</h2>
+<h4 >Explore our extensive iPhone collection.
+</h4>
+<h4 >Place your bid on the model you desire.
+
+</h4>
+<h4 >Compete with fellow shoppers to secure your iPhone.
+
+</h4>
+<h4 >Win the auction and own the iPhone generation you love.
+
+</h4>
+
+<table>
+    <thead>
+    <tr>
+        <th>iPhone Name</th>
+        <th>Processor</th>
+        <th>Camera</th>
+        <th>Released</th>
+        <th>Screen Size</th>
+        <th>OS</th>
+        <th>Notable Feature</th>
+        <th>Connectivity</th>
+        <th>Storage Options</th>
+        <th>Battery Life</th>
+        <th>Dimensions</th>
+        <th>Bid Your Price</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="iphone : ${iphoneList}">
+        <td th:text="${iphone.iphoneName}"></td>
+        <td th:text="${iphone.processor}"></td>
+        <td th:text="${iphone.camera}"></td>
+        <td th:text="${#dates.format(iphone.released, 'yyyy-MM-dd')}"></td>
+        <td th:text="${iphone.screenSize}"></td>
+        <td th:text="${iphone.os}"></td>
+        <td th:text="${iphone.notableFeature}"></td>
+        <td th:text="${iphone.connectivity}"></td>
+        <td th:text="${iphone.storageOptions}"></td>
+        <td th:text="${iphone.batteryLife}"></td>
+        <td th:text="${iphone.dimensions}"></td>
+        <td>
+            <form  th:action="@{'/bids/' + ${iphone.iphoneId}}" method="post">
+                <button class="shop-button" type="submit">Click to Bid</button>
+            </form>
+        </td>
+    <tbody>
+    </tr>
+    </tbody>
+
+</table>
+
+<!-- footer -->
+<div th:replace="footer :: footer"></div>
+<!-- //footer -->
+</body>
+
+
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<!-- add script link here -->
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" th:href="@{/assets/css/styles.css}"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Playfair+Display:400,700&display=swap">
+
+    <title>Market</title>
+</head>
+<body>
+
+<!-- header -->
+<div th:replace="header :: header"></div>
+<!-- //header -->
+
+<form th:action="@{/updateProfile}" method="post"  th:object="${userProfile}">
+
+     <div>
+            <label class="userprofile-form-label" for="name">Name:</label>
+            <label class="userprofile-form-textarea"  type="text" id="name" th:text="*{name}" </label>
+            <span th:if="${#fields.hasErrors('name')}" th:errors="*{name}">Name Error</span>
+        </div>
+
+        <div>
+            <label class="userprofile-form-label" for="mobileNumber">Mobile Number:</label>
+            <label class="userprofile-form-textarea" type="text" id="mobileNumber" th:text="*{mobileNumber}" </label>
+            <span th:if="${#fields.hasErrors('mobileNumber')}" th:errors="*{mobileNumber}">Mobile Number Error</span>
+        </div>
+
+        <div>
+            <label class="userprofile-form-label" for="email">Email:</label>
+            <label class="userprofile-form-textarea" type="text" id="email" th:text="*{email}" </label>
+            <span th:if="${#fields.hasErrors('email')}" th:errors="*{email}">Email Error</span>
+        </div>
+
+        <div>
+            <label class="userprofile-form-label" for="address1">Address1:</label>
+            <input class="userprofile-form-textarea" type="text" id="address1" th:field="*{address1}" required>
+            <span th:if="${#fields.hasErrors('address1')}" th:errors="*{address1}">Address1 Error</span>
+        </div>
+
+        <div>
+                    <label class="userprofile-form-label" for="address2">Address2:</label>
+                    <input class="userprofile-form-textarea" type="text" id="address2" th:field="*{address2}">
+                    <span th:if="${#fields.hasErrors('address2')}" th:errors="*{address2}">Address2 Error</span>
+                </div>
+
+        <div>
+                    <label class="userprofile-form-label" for="city">Address1:</label>
+                    <input class="userprofile-form-textarea" type="text" id="city" th:field="*{city}" required>
+                    <span th:if="${#fields.hasErrors('city')}" th:errors="*{city}">City Error</span>
+                </div>
+
+
+        <div>
+                            <label class="userprofile-form-label" for="state">Address2:</label>
+                            <input class="userprofile-form-textarea" type="text" id="state" th:field="*{state}">
+                            <span th:if="${#fields.hasErrors('state')}" th:errors="*{state}">State Error</span>
+                        </div>
+        <div>
+                    <label class="userprofile-form-label" for="zipCode">zipCode:</label>
+                    <input class="userprofile-form-textarea" type="text" id="zipCode" th:field="*{address1}" required>
+                    <span th:if="${#fields.hasErrors('zipCode')}" th:errors="*{zipCode}">ZipCode Error</span>
+                </div>
+
+
+        <div>
+                    <button class="userprofile-button"  type="submit">Submit</button>
+                </div>
+
+            <div>
+
+              <a th:href="@{/dash}" >
+                <button class="userprofile-back-button" th:formaction="@{/dash}">BACK</button></a>
+            </div>
+
+
+
+
+    </form>
+
+
+<!-- footer -->
+<div th:replace="footer :: footer"></div>
+<!-- //footer -->
+</body>
+</html>

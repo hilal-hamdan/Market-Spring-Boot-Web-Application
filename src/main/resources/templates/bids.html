@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" th:href="@{/assets/css/styles.css}"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Playfair+Display:400,700&display=swap">
+    <title>Market Bid</title>
+</head>
+<body>
+<div id="page-container">
+    <!-- header -->
+    <div th:replace="header :: header"></div>
+    <!-- //header -->
+<h1>iPhone Details</h1>
+<table>
+    <tr>
+        <td>iPhone Name:</td>
+        <td th:text="${iphone.iphoneName}"></td>
+    </tr>
+    <tr>
+        <td>Processor:</td>
+        <td th:text="${iphone.processor}"></td>
+    </tr>
+    <tr>
+        <td>Camera:</td>
+        <td th:text="${iphone.camera}"></td>
+    </tr>
+    <tr>
+        <td>Released:</td>
+        <td th:text="${#dates.format(iphone.released, 'yyyy-MM-dd')}"></td>
+    </tr>
+    <tr>
+        <td>Screen Size:</td>
+        <td th:text="${iphone.screenSize}"></td>
+    </tr>
+    <tr>
+        <td>OS:</td>
+        <td th:text="${iphone.os}"></td>
+    </tr>
+    <tr>
+        <td>Notable Feature:</td>
+        <td th:text="${iphone.notableFeature}"></td>
+    </tr>
+    <tr>
+        <td>Connectivity:</td>
+        <td th:text="${iphone.connectivity}"></td>
+    </tr>
+    <tr>
+        <td>Storage Options:</td>
+        <td th:text="${iphone.storageOptions}"></td>
+    </tr>
+    <tr>
+        <td>Battery Life:</td>
+        <td th:text="${iphone.batteryLife}"></td>
+    </tr>
+    <tr>
+        <td>Dimensions:</td>
+        <td th:text="${iphone.dimensions}"></td>
+    </tr>
+    <tr>
+        <td>iPhone current Bid:</td>
+        <td class="current-bid" th:text="${iphone.maxBidAmount}"></td>
+    </tr>
+</table>
+
+<form th:action="@{/submitabid}" method="post">
+    <label for="bidAmount">Bid Amount:</label>
+    <input class="bid-form-textarea" type="number" id="bidAmount" placeholder="Bid must be greater than the Max Bid" name="bidAmount" required>
+    <p><br></p>
+    <button class="bid-button" type="submit">Submit Bid</button>
+</form>
+</div>
+<!-- footer -->
+<div th:replace="footer :: footer"></div>
+<!-- //footer -->
+</body>
+</html>

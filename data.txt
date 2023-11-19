@@ -1,0 +1,198 @@
+-- Insert roles
+INSERT INTO `roles` (`role_name`, `created_at`, `created_by`)
+VALUES ('ADMIN', CURDATE(), 'DBA');
+
+INSERT INTO `roles` (`role_name`, `created_at`, `created_by`)
+VALUES ('USER', CURDATE(), 'DBA');
+
+-- Insert a user
+INSERT INTO `user` (`name`, `email`, `mobile_number`, `pwd`, `role_id`, `created_at`, `created_by`)
+VALUES ('Admin', 'admin@market.com', '0509712300', '$2a$12$HoeZuCueyqOkpu01aFuGWuScLd5Hj/aMb2qwkAUM29cNXLe86Bw7i', 1, CURDATE(), 'DBA');
+
+
+-- iPhone (1st Generation)
+INSERT INTO iphoneMobile (iphone_name, processor, camera, released, screen_size, OS, notable_feature, connectivity, storage_options, battery_life, dimensions, price, img,`created_at`, `created_by`,`max_bid_amount`)
+VALUES
+('iPhone (1st Generation)', 'Apple A3', '2.0 MP (Rear), No front camera', '2007-06-29', '3.5 inches', 'iOS 3.1.3', 'First iPhone with a touchscreen interface.', '2G (EDGE), Wi-Fi, Bluetooth', '4GB, 8GB', 'Up to 8 hours of talk time', '115 x 61 x 11.6 mm', NULL,CURDATE(), 'DBA',1034);
+
+-- iPhone 3G (2nd Generation)
+INSERT INTO iphoneMobile (iphone_name, processor, camera, released, screen_size, OS, notable_feature, connectivity, storage_options, battery_life, dimensions, price, img,`created_at`, `created_by`,`max_bid_amount`)
+VALUES
+('iPhone 3G (2nd Generation)', 'Apple A4', '2.0 MP (Rear), No front camera', '2008-07-11', '3.5 inches', 'iOS 4.2.1', 'Introduced 3G support and the App Store.', '3G, Wi-Fi, Bluetooth, GPS', '8GB, 16GB', 'Up to 10 hours of talk time', '115.5 x 62.1 x 12.3 mm', 199, NULL,CURDATE(), 'DBA',997);
+
+-- iPhone 3GS (3rd Generation)
+INSERT INTO iphoneMobile (iphone_name, processor, camera, released, screen_size, OS, notable_feature, connectivity, storage_options, battery_life, dimensions, price, img,`created_at`, `created_by`,`max_bid_amount`)
+VALUES
+('iPhone 3GS (3rd Generation)', 'Apple A4', '3.15 MP (Rear), No front camera', '2009-06-19', '3.5 inches', 'iOS 6.1.6', 'Faster performance and improved camera.', '3G, Wi-Fi, Bluetooth, GPS', '8GB, 16GB, 32GB', 'Up to 12 hours of talk time', '115.5 x 62.1 x 12.3 mm', 199, NULL,CURDATE(), 'DBA',890);
+
+-- iPhone 4 (4th Generation)
+INSERT INTO iphoneMobile (iphone_name, processor, camera, released, screen_size, OS, notable_feature, connectivity, storage_options, battery_life, dimensions, price, img,`created_at`, `created_by`,`max_bid_amount`)
+VALUES
+('iPhone 4 (4th Generation)', 'Apple A4', '5.0 MP (Rear), 0.3 MP (Front)', '2010-06-24', '3.5 inches', 'iOS 7.1.2', 'Retina display and front-facing camera.', '3G, Wi-Fi, Bluetooth, GPS', '8GB, 16GB, 32GB', 'Up to 14 hours of talk time', '115.2 x 58.6 x 9.3 mm', 199, NULL,CURDATE(), 'DBA',999);
+
+-- iPhone 4S (5th Generation)
+INSERT INTO iphoneMobile (iphone_name, processor, camera, released, screen_size, OS, notable_feature, connectivity, storage_options, battery_life, dimensions, price, img,`created_at`, `created_by`)
+VALUES
+-- iPhone 4S (5th Generation)
+INSERT INTO iphoneMobile (iphone_name, processor, camera, released, screen_size, OS, notable_feature, connectivity, storage_options, battery_life, dimensions, price, img,`created_at`, `created_by`)
+VALUES
+('iPhone 4S (5th Generation)', 'Apple A5', '8.0 MP (Rear), 0.3 MP (Front)', '2011-10-14', '3.5 inches', 'iOS 9.3.6', 'Siri, a voice-activated virtual assistant.', '3G, Wi-Fi, Bluetooth, GPS', '8GB, 16GB, 32GB, 64GB', 'Up to 14 hours of talk time', '115.2 x 58.6 x 9.3 mm', 199, NULL,CURDATE(), 'DBA');
+
+-- iPhone 5 (6th Generation)
+INSERT INTO iphoneMobile (iphone_name, processor, camera, released, screen_size, OS, notable_feature, connectivity, storage_options, battery_life, dimensions, price, img,`created_at`, `created_by`)
+VALUES
+('iPhone 5 (6th Generation)', 'Apple A6', '8.0 MP (Rear), 1.2 MP (Front)', '2012-09-21', '4.0 inches', 'iOS 10.3.4', 'Introduced the Lightning connector and a larger screen.', '4G LTE, Wi-Fi, Bluetooth, GPS', '16GB, 32GB, 64GB', 'Up to 8 hours of talk time', '123.8 x 58.6 x 7.6 mm', 199, NULL,CURDATE(), 'DBA');
+
+-- iPhone 5c (7th Generation)
+INSERT INTO iphoneMobile (iphone_name, processor, camera, released, screen_size, OS, notable_feature, connectivity, storage_options, battery_life, dimensions, price, img,`created_at`, `created_by`)
+VALUES
+('iPhone 5c (7th Generation)', 'Apple A6', '8.0 MP (Rear), 1.2 MP (Front)', '2013-09-20', '4.0 inches', 'iOS 10.3.4', 'Available in various colorful plastic casings.', '4G LTE, Wi-Fi, Bluetooth, GPS', '16GB, 32GB', 'Up to 8 hours of talk time', '124.4 x 59.2 x 8.97 mm', 199, NULL,CURDATE(), 'DBA');
+
+-- iPhone 5s (7th Generation)
+INSERT INTO iphoneMobile (iphone_name, processor, camera, released, screen_size, OS, notable_feature, connectivity, storage_options, battery_life, dimensions, price, img,`created_at`, `created_by`)
+VALUES
+('iPhone 5s (7th Generation)', 'Apple A7', '8.0 MP (Rear), 1.2 MP (Front)', '2013-09-20', '4.0 inches', 'iOS 10.3.4', 'Introduced Touch ID fingerprint recognition.', '4G LTE, Wi-Fi, Bluetooth, GPS', '16GB, 32GB, 64GB', 'Up to 10 hours of talk time', '123.8 x 58.6 x 7.6 mm', 199, NULL,CURDATE(), 'DBA');
+
+-- iPhone 6 (8th Generation)
+INSERT INTO iphoneMobile (iphone_name, processor, camera, released, screen_size, OS, notable_feature, connectivity, storage_options, battery_life, dimensions, price, img,`created_at`, `created_by`)
+VALUES
+('iPhone 6 (8th Generation)', 'Apple A8', '8.0 MP (Rear), 1.2 MP (Front)', '2014-09-19', '4.7 inches', 'iOS 12.5.5', 'Available in standard and Plus models.', '4G LTE, Wi-Fi, Bluetooth, GPS', '16GB, 64GB, 128GB', 'Up to 14 hours of talk time', '138.1 x 67 x 6.9 mm', 199, NULL,CURDATE(), 'DBA');
+
+-- iPhone 6 Plus (8th Generation)
+INSERT INTO iphoneMobile (iphone_name, processor, camera, released, screen_size, OS, notable_feature, connectivity, storage_options, battery_life, dimensions, price, img,`created_at`, `created_by`)
+VALUES
+('iPhone 6 Plus (8th Generation)', 'Apple A8', '8.0 MP (Rear), 1.2 MP (Front)', '2014-09-19', '5.5 inches', 'iOS 12.5.5', 'Larger version of the iPhone 6.', '4G LTE, Wi-Fi, Bluetooth, GPS', '16GB, 64GB, 128GB', 'Up to 24 hours of talk time', '158.1 x 77.8 x 7.1 mm', 199, NULL,CURDATE(), 'DBA');
+
+-- iPhone 6s (9th Generation)
+INSERT INTO iphoneMobile (iphone_name, processor, camera, released, screen_size, OS, notable_feature, connectivity, storage_options, battery_life, dimensions, price, img,`created_at`, `created_by`)
+VALUES
+('iPhone 6s (9th Generation)', 'Apple A9', '12.0 MP (Rear), 5.0 MP (Front)', '2015-09-25', '4.7 inches', 'iOS 15.7', 'Introduced 3D Touch technology.', '4G LTE, Wi-Fi, Bluetooth, GPS', '16GB, 64GB, 128GB', 'Up to 14 hours of talk time', '138.3 x 67.1 x 7.1 mm', 199, NULL,CURDATE(), 'DBA');
+
+-- iPhone 6s Plus (9th Generation)
+INSERT INTO iphoneMobile (iphone_name, processor, camera, released, screen_size, OS, notable_feature, connectivity, storage_options, battery_life, dimensions, price, img,`created_at`, `created_by`)
+VALUES
+('iPhone 6s Plus (9th Generation)', 'Apple A9', '12.0 MP (Rear), 5.0 MP (Front)', '2015-09-25', '5.5 inches', 'iOS 15.7', 'Larger version of the iPhone 6s with 3D Touch.', '4G LTE, Wi-Fi, Bluetooth, GPS', '16GB, 64GB, 128GB', 'Up to 24 hours of talk time', '158.2 x 77.9 x 7.3 mm', 199, NULL,CURDATE(), 'DBA');
+
+-- iPhone SE (1st Generation)
+INSERT INTO iphoneMobile (iphone_name, processor, camera, released, screen_size, OS, notable_feature, connectivity, storage_options, battery_life, dimensions, price, img,`created_at`, `created_by`)
+VALUES
+('iPhone SE (1st Generation)', 'Apple A9', '12.0 MP (Rear), 1.2 MP (Front)', '2016-03-31', '4.0 inches', 'iOS 15.7', 'Compact design with the internals of the iPhone 6s.', '4G LTE, Wi-Fi, Bluetooth, GPS', '16GB, 64GB', 'Up to 14 hours of talk time', '123.8 x 58.6 x 7.6 mm', 199, NULL,CURDATE(), 'DBA');
+
+-- iPhone 7 (10th Generation)
+INSERT INTO iphoneMobile (iphone_name, processor, camera, released, screen_size, OS, notable_feature, connectivity, storage_options, battery_life, dimensions, price, img,`created_at`, `created_by`)
+VALUES
+('iPhone 7 (10th Generation)', 'Apple A10 Fusion', '12.0 MP (Rear), 7.0 MP (Front)', '2016-09-16', '4.7 inches', 'iOS 15.7', 'Water and dust resistance, and no headphone jack.', '4G LTE, Wi-Fi, Bluetooth, GPS', '32GB, 128GB, 256GB', 'Up to 14 hours of talk time', '138.3 x 67.1 x 7.1 mm', 199, NULL,CURDATE(), 'DBA');
+
+-- iPhone 7 Plus (10th Generation)
+INSERT INTO iphoneMobile (iphone_name, processor, camera, released, screen_size, OS, notable_feature, connectivity, storage_options, battery_life, dimensions, price, img,`created_at`, `created_by`)
+VALUES
+('iPhone 7 Plus (10th Generation)', 'Apple A10 Fusion', '12.0 MP (Rear), 7.0 MP (Front)', '2016-09-16', '5.5 inches', 'iOS 15.7', 'Larger version of the iPhone 7 with dual cameras.', '4G LTE, Wi-Fi, Bluetooth, GPS', '32GB, 128GB, 256GB', 'Up to 21 hours of talk time', '158.2 x 77.9 x 7.3 mm', 199, NULL,CURDATE(), 'DBA');
+
+-- iPhone 8 (11th Generation)
+INSERT INTO iphoneMobile (iphone_name, processor, camera, released, screen_size, OS, notable_feature, connectivity, storage_options, battery_life, dimensions, price, img,`created_at`, `created_by`)
+VALUES
+('iPhone 8 (11th Generation)', 'Apple A11 Bionic', '12.0 MP (Rear), 7.0 MP (Front)', '2017-09-22', '4.7 inches', 'iOS 15.7', 'Glass back and wireless charging support.', '4G LTE, Wi-Fi, Bluetooth, GPS', '64GB, 256GB', 'Up to 14 hours of talk time', '138.4 x 67.3 x 7.3 mm', 199, NULL,CURDATE(), 'DBA');
+
+-- iPhone 8 Plus (11th Generation)
+INSERT INTO iphoneMobile (iphone_name, processor, camera, released, screen_size, OS, notable_feature, connectivity, storage_options, battery_life, dimensions, price, img,`created_at`, `created_by`)
+VALUES
+('iPhone 8 Plus (11th Generation)', 'Apple A11 Bionic', '12.0 MP (Rear), 7.0 MP (Front)', '2017-09-22', '5.5 inches', 'iOS 15.7', 'Larger version of the iPhone 8 with dual cameras.', '4G LTE, Wi-Fi, Bluetooth, GPS', '64GB, 256GB', 'Up to 21 hours of talk time', '158.4 x 78.1 x 7.5 mm', 199, NULL,CURDATE(), 'DBA');
+
+-- iPhone X (11th Generation)
+INSERT INTO iphoneMobile (iphone_name, processor, camera, released, screen_size, OS, notable_feature, connectivity, storage_options, battery_life, dimensions, price, img,`created_at`, `created_by`)
+VALUES
+('iPhone X (11th Generation)', 'Apple A11 Bionic', '12.0 MP (Rear), 7.0 MP (Front)', '2017-11-03', '5.8 inches', 'iOS 15.7', 'First iPhone with Face ID facial recognition.', '4G LTE, Wi-Fi, Bluetooth, GPS', '64GB, 256GB', 'Up to 21 hours of talk time', '143.6 x 70.9 x 7.7 mm', 199, NULL,CURDATE(), 'DBA');
+
+-- iPhone XR (11th Generation)
+INSERT INTO iphoneMobile (iphone_name, processor, camera, released, screen_size, OS, notable_feature, connectivity, storage_options, battery_life, dimensions, price, img,`created_at`, `created_by`)
+VALUES
+('iPhone XR (11th Generation)', 'Apple A12 Bionic', '12.0 MP (Rear), 7.0 MP (Front)', '2018-10-26', '6.1 inches', 'iOS 15.7', 'Lower-cost iPhone with a Liquid Retina display.', '4G LTE, Wi-Fi, Bluetooth, GPS', '64GB, 128GB, 256GB', 'Up to 25 hours of talk time', '150.9 x 75.7 x 8.3 mm', 199, NULL,CURDATE(), 'DBA');
+
+-- iPhone XS (11th Generation)
+INSERT INTO iphoneMobile (iphone_name, processor, camera, released, screen_size, OS, notable_feature, connectivity, storage_options, battery_life, dimensions, price, img,`created_at`, `created_by`)
+VALUES
+('iPhone XS (11th Generation)', 'Apple A12 Bionic', '12.0 MP (Rear), 7.0 MP (Front)', '2018-09-21', '5.8 inches', 'iOS 15.7', 'Upgrade over the iPhone X with improved internals.', '4G LTE, Wi-Fi, Bluetooth, GPS', '64GB, 256GB, 512GB', 'Up to 20 hours of talk time', '143.6 x 70.9 x 7.7 mm', 199, NULL,CURDATE(), 'DBA');
+
+
+    -- iPhone 11 (12th Generation)
+INSERT INTO iphoneMobile (iphone_name, processor, camera, released, screen_size, OS, notable_feature, connectivity, storage_options, battery_life, dimensions, price, img,`created_at`, `created_by`)
+VALUES ('iPhone 11 (12th Generation)', 'Apple A13 Bionic', '12.0 MP (Rear), 12.0 MP (Front)', '2019-09-20', '6.1 inches', 'iOS 15.7', 'Dual-camera system with Night mode.', '4G LTE, Wi-Fi, Bluetooth, GPS', '64GB, 128GB, 256GB', 'Up to 17 hours of talk time', '150.9 x 75.7 x 8.3 mm', 699, NULL,CURDATE(), 'DBA');
+
+-- iPhone 11 Pro (12th Generation)
+INSERT INTO iphoneMobile (iphone_name, processor, camera, released, screen_size, OS, notable_feature, connectivity, storage_options, battery_life, dimensions, price, img,`created_at`, `created_by`)
+VALUES ('iPhone 11 Pro (12th Generation)', 'Apple A13 Bionic', '12.0 MP (Rear), 12.0 MP (Front)', '2019-09-20', '5.8 inches', 'iOS 15.7', 'Triple-camera system and Super Retina XDR display.', '4G LTE, Wi-Fi, Bluetooth, GPS', '64GB, 256GB, 512GB', 'Up to 18 hours of talk time', '144 x 71.4 x 8.1 mm', 999, NULL,CURDATE(), 'DBA');
+
+-- iPhone 11 Pro Max (12th Generation)
+INSERT INTO iphoneMobile (iphone_name, processor, camera, released, screen_size, OS, notable_feature, connectivity, storage_options, battery_life, dimensions, price, img,`created_at`, `created_by`)
+VALUES ('iPhone 11 Pro Max (12th Generation)', 'Apple A13 Bionic', '12.0 MP (Rear), 12.0 MP (Front)', '2019-09-20', '6.5 inches', 'iOS 15.7', 'Larger "Pro Max" model with triple-camera system and Super Retina XDR display.', '4G LTE, Wi-Fi, Bluetooth, GPS', '64GB, 256GB, 512GB', 'Up to 20 hours of talk time', '158 x 77.8 x 8.1 mm', 1099, NULL,CURDATE(), 'DBA');
+
+-- iPhone SE (2nd Generation)
+INSERT INTO iphoneMobile (iphone_name, processor, camera, released, screen_size, OS, notable_feature, connectivity, storage_options, battery_life, dimensions, price, img,`created_at`, `created_by`)
+VALUES ('iPhone SE (2nd Generation)', 'Apple A13 Bionic', '12.0 MP (Rear), 7.0 MP (Front)', '2020-04-24', '4.7 inches', 'iOS 15.7', 'Compact design with powerful internals.', '4G LTE, Wi-Fi, Bluetooth, GPS', '64GB, 128GB, 256GB', 'Up to 14 hours of talk time', '138.4 x 67.3 x 7.3 mm', 399, NULL,CURDATE(), 'DBA');
+
+-- iPhone 12 (13th Generation)
+INSERT INTO iphoneMobile (iphone_name, processor, camera, released, screen_size, OS, notable_feature, connectivity, storage_options, battery_life, dimensions, price, img,`created_at`, `created_by`)
+VALUES ('iPhone 12 (13th Generation)', 'Apple A14 Bionic', '12.0 MP (Rear), 12.0 MP (Front)', '2020-10-23', '6.1 inches', 'iOS 15.7', '5G support and Ceramic Shield front cover.', '5G, Wi-Fi 6, Bluetooth, GPS', '64GB, 128GB, 256GB', 'Up to 17 hours of talk time', '146.7 x 71.5 x 7.4 mm', 799, NULL,CURDATE(), 'DBA');
+
+-- iPhone 12 mini (13th Generation)
+INSERT INTO iphoneMobile (iphone_name, processor, camera, released, screen_size, OS, notable_feature, connectivity, storage_options, battery_life, dimensions, price, img,`created_at`, `created_by`)
+VALUES ('iPhone 12 mini (13th Generation)', 'Apple A14 Bionic', '12.0 MP (Rear), 12.0 MP (Front)', '2020-11-13', '5.4 inches', 'iOS 15.7', 'Compact design with the power of the iPhone 12.', '5G, Wi-Fi 6, Bluetooth, GPS', '64GB, 128GB, 256GB', 'Up to 15 hours of talk time', '131.5 x 64.2 x 7.4 mm', 699, NULL,CURDATE(), 'DBA');
+
+-- iPhone 12 Pro (13th Generation)
+INSERT INTO iphoneMobile (iphone_name, processor, camera, released, screen_size, OS, notable_feature, connectivity, storage_options, battery_life, dimensions, price, img,`created_at`, `created_by`)
+VALUES ('iPhone 12 Pro (13th Generation)', 'Apple A14 Bionic', '12.0 MP (Rear), 12.0 MP (Front)', '2020-10-23', '6.1 inches', 'iOS 15.7', 'Pro camera system, LiDAR scanner, and Ceramic Shield front cover.', '5G, Wi-Fi 6, Bluetooth, GPS', '128GB, 256GB, 512GB', 'Up to 17 hours of talk time', '146.7 x 71.5 x 7.4 mm', 999, NULL,CURDATE(), 'DBA');
+
+-- iPhone 12 Pro Max (13th Generation)
+INSERT INTO iphoneMobile (iphone_name, processor, camera, released, screen_size, OS, notable_feature, connectivity, storage_options, battery_life, dimensions, price, img,`created_at`, `created_by`)
+VALUES ('iPhone 12 Pro Max (13th Generation)', 'Apple A14 Bionic', '12.0 MP (Rear), 12.0 MP (Front)', '2020-10-23', '6.7 inches', 'iOS 15.7', 'Larger "Pro Max" model with Pro camera system and Ceramic Shield front cover.', '5G, Wi-Fi 6, Bluetooth, GPS', '128GB, 256GB, 512GB', 'Up to 20 hours of talk time', '160.8 x 78.1 x 7.4 mm', 1099, NULL,CURDATE(), 'DBA');
+
+-- iPhone 13 (14th Generation)
+INSERT INTO iphoneMobile (iphone_name, processor, camera, released, screen_size, OS, notable_feature, connectivity, storage_options, battery_life, dimensions, price, img,`created_at`, `created_by`)
+VALUES ('iPhone 13 (14th Generation)', 'Apple A15 Bionic', '12.0 MP (Rear), 12.0 MP (Front)', '2021-09-24', '6.1 inches', 'iOS 15.7', 'Cinematic mode, Super Retina XDR display.', '5G, Wi-Fi 6, Bluetooth, GPS', '128GB, 256GB, 512GB', 'Up to 22 hours of talk time', '146.7 x 71.5 x 7.7 mm', 799, NULL,CURDATE(), 'DBA');
+
+-- iPhone 13 mini (14th Generation)
+INSERT INTO iphoneMobile (iphone_name, processor, camera, released, screen_size, OS, notable_feature, connectivity, storage_options, battery_life, dimensions, price, img,`created_at`, `created_by`)
+VALUES ('iPhone 13 mini (14th Generation)', 'Apple A15 Bionic', '12.0 MP (Rear), 12.0 MP (Front)', '2021-09-24', '5.4 inches', 'iOS 15.7', 'Compact design with the power of the iPhone 13.', '5G, Wi-Fi 6, Bluetooth, GPS', '128GB, 256GB, 512GB', 'Up to 17 hours of talk time', '131.5 x 64.2 x 7.7 mm', 699, NULL,CURDATE(), 'DBA');
+
+-- iPhone 13 Pro (14th Generation)
+INSERT INTO iphoneMobile (iphone_name, processor, camera, released, screen_size, OS, notable_feature, connectivity, storage_options, battery_life, dimensions, price, img,`created_at`, `created_by`)
+VALUES ('iPhone 13 Pro (14th Generation)', 'Apple A15 Bionic', '12.0 MP (Rear), 12.0 MP (Front)', '2021-09-24', '6.1 inches', 'iOS 15.7', 'Pro camera system, Super Retina XDR display.', '5G, Wi-Fi 6, Bluetooth, GPS', '128GB, 256GB, 512GB, 1TB', 'Up to 22 hours of talk time', '146.7 x 71.5 x 7.7 mm', 999, NULL,CURDATE(), 'DBA');
+
+-- iPhone 13 Pro Max (14th Generation)
+INSERT INTO iphoneMobile (iphone_name, processor, camera, released, screen_size, OS, notable_feature, connectivity, storage_options, battery_life, dimensions, price, img,`created_at`, `created_by`)
+VALUES ('iPhone 13 Pro Max (14th Generation)', 'Apple A15 Bionic', '12.0 MP (Rear), 12.0 MP (Front)', '2021-09-24', '6.7 inches', 'iOS 15.7', 'Larger "Pro Max" model with Pro camera system and Super Retina XDR display.', '5G, Wi-Fi 6, Bluetooth, GPS', '128GB, 256GB, 512GB, 1TB', 'Up to 28 hours of talk time', '160.8 x 78.1 x 7.7 mm', 1099, NULL,CURDATE(), 'DBA');
+
+-- iPhone 14 (15th Generation)
+INSERT INTO iphoneMobile (iphone_name, processor, camera, released, screen_size, OS, notable_feature, connectivity, storage_options, battery_life, dimensions, price, img,`created_at`, `created_by`)
+VALUES ('iPhone 14 (15th Generation)', 'Apple A16 Bionic', '12.0 MP (Rear), 12.0 MP (Front)', '2022-09-23', '6.1 inches', 'iOS 16.0', 'New processor and enhanced camera system.', '5G, Wi-Fi 6, Bluetooth, GPS', '128GB, 256GB, 512GB', 'Up to 22 hours of talk time', '146.7 x 71.5 x 7.7 mm', 799, NULL,CURDATE(), 'DBA');
+
+-- iPhone 14 mini (15th Generation)
+INSERT INTO iphoneMobile (iphone_name, processor, camera, released, screen_size, OS, notable_feature, connectivity, storage_options, battery_life, dimensions, price, img,`created_at`, `created_by`)
+VALUES ('iPhone 14 mini (15th Generation)', 'Apple A16 Bionic', '12.0 MP (Rear), 12.0 MP (Front)', '2022-09-23', '5.4 inches', 'iOS 16.0', 'Compact design with powerful performance.', '5G, Wi-Fi 6, Bluetooth, GPS', '128GB, 256GB, 512GB', 'Up to 17 hours of talk time', '131.5 x 64.2 x 7.7 mm', 699, NULL,CURDATE(), 'DBA');
+
+-- iPhone 14 Pro (15th Generation)
+INSERT INTO iphoneMobile (iphone_name, processor, camera, released, screen_size, OS, notable_feature, connectivity, storage_options, battery_life, dimensions, price, img,`created_at`, `created_by`)
+VALUES ('iPhone 14 Pro (15th Generation)', 'Apple A16 Bionic', '12.0 MP (Rear), 12.0 MP (Front)', '2022-09-23', '6.1 inches', 'iOS 16.0', 'Pro camera system, Super Retina XDR display.', '5G, Wi-Fi 6, Bluetooth, GPS', '128GB, 256GB, 512GB, 1TB', 'Up to 22 hours of talk time', '146.7 x 71.5 x 7.7 mm', 999, NULL,CURDATE(), 'DBA');
+
+-- iPhone 14 Pro Max (15th Generation)
+INSERT INTO iphoneMobile (iphone_name, processor, camera, released, screen_size, OS, notable_feature, connectivity, storage_options, battery_life, dimensions, price, img,`created_at`, `created_by`)
+VALUES ('iPhone 14 Pro Max (15th Generation)', 'Apple A16 Bionic', '12.0 MP (Rear), 12.0 MP (Front)', '2022-09-23', '6.7 inches', 'iOS 16.0', 'Larger "Pro Max" model with Pro camera system and Super Retina XDR display.', '5G, Wi-Fi 6, Bluetooth, GPS', '128GB, 256GB, 512GB, 1TB', 'Up to 28 hours of talk time', '160.8 x 78.1 x 7.7 mm', 1099, NULL,CURDATE(), 'DBA');
+
+-- iPhone 15 (16th Generation)
+INSERT INTO iphoneMobile (iphone_name, processor, camera, released, screen_size, OS, notable_feature, connectivity, storage_options, battery_life, dimensions, price, img,`created_at`, `created_by`)
+VALUES ('iPhone 15 (16th Generation)', 'Apple A17 Bionic', '12.0 MP (Rear), 12.0 MP (Front)', '2023-09-29', '6.1 inches', 'iOS 17.0', 'New processor and advanced camera capabilities.', '5G, Wi-Fi 6E, Bluetooth, GPS', '128GB, 256GB, 512GB', 'Up to 24 hours of talk time', '146.7 x 71.5 x 7.7 mm', 799, NULL,CURDATE(), 'DBA');
+
+-- iPhone 15 mini (16th Generation)
+INSERT INTO iphoneMobile (iphone_name, processor, camera, released, screen_size, OS, notable_feature, connectivity, storage_options, battery_life, dimensions, price, img,`created_at`, `created_by`)
+VALUES ('iPhone 15 mini (16th Generation)', 'Apple A17 Bionic', '12.0 MP (Rear), 12.0 MP (Front)', '2023-09-29', '5.4 inches', 'iOS 17.0', 'Compact design with high-end performance.', '5G, Wi-Fi 6E, Bluetooth, GPS', '128GB, 256GB, 512GB', 'Up to 19 hours of talk time', '131.5 x 64.2 x 7.7 mm', 699, NULL,CURDATE(), 'DBA');
+
+-- iPhone 15 Pro (16th Generation)
+INSERT INTO iphoneMobile (iphone_name, processor, camera, released, screen_size, OS, notable_feature, connectivity, storage_options, battery_life, dimensions, price, img,`created_at`, `created_by`)
+VALUES ('iPhone 15 Pro (16th Generation)', 'Apple A17 Bionic', '12.0 MP (Rear), 12.0 MP (Front)', '2023-09-29', '6.1 inches', 'iOS 17.0', 'Pro camera system, Super Retina XDR display.', '5G, Wi-Fi 6E, Bluetooth, GPS', '128GB, 256GB, 512GB, 1TB', 'Up to 24 hours of talk time', '146.7 x 71.5 x 7.7 mm', 999, NULL,CURDATE(), 'DBA');
+
+-- iPhone 15 Pro Max (16th Generation)
+INSERT INTO iphoneMobiles (iphone_name, processor, camera, released, screen_size, OS, notable_feature, connectivity, storage_options, battery_life, dimensions, price, img,`created_at`, `created_by`)
+VALUES ('iPhone 15 Pro Max (16th Generation)', 'Apple A17 Bionic', '12.0 MP (Rear), 12.0 MP (Front)', '2023-09-29', '6.7 inches', 'iOS 17.0', 'Larger "Pro Max" model with Pro camera system and Super Retina XDR display.', '5G, Wi-Fi 6E, Bluetooth, GPS', '128GB, 256GB, 512GB, 1TB', 'Up to 28 hours of talk time', '160.8 x 78.1 x 7.7 mm', 1099, NULL,CURDATE(), 'DBA');
+
+
+

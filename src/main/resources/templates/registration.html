@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" th:href="@{/assets/css/styles.css}"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Playfair+Display:400,700&display=swap">
+
+    <title>Market</title>
+</head>
+<body>
+
+<!-- Include the header -->
+<div th:replace="header :: header"></div>
+
+<h1>Registration</h1>
+
+
+<form th:action="@{/createUser}" th:object="${user}" method="post">
+    <div>
+        <label class="registration-form-label" for="name">Name:</label>
+        <input class="registration-form-textarea"  type="text" id="name" th:field="*{name}" required>
+        <span th:if="${#fields.hasErrors('name')}" th:errors="*{name}">Name Error</span>
+    </div>
+
+    <div>
+        <label class="registration-form-label" for="mobileNumber">Mobile Number:</label>
+        <input class="registration-form-textarea" type="text" id="mobileNumber" th:field="*{mobileNumber}" required>
+        <span th:if="${#fields.hasErrors('mobileNumber')}" th:errors="*{mobileNumber}">Mobile Number Error</span>
+    </div>
+
+    <div>
+        <label class="registration-form-label" for="email">Email:</label>
+        <input class="registration-form-textarea" type="text" id="email" th:field="*{email}" required>
+        <span th:if="${#fields.hasErrors('email')}" th:errors="*{email}">Email Error</span>
+    </div>
+
+    <div>
+        <label class="registration-form-label" for="confirmEmail">Confirm Email:</label>
+        <input class="registration-form-textarea" type="text" id="confirmEmail" th:field="*{confirmEmail}" required>
+        <span th:if="${#fields.hasErrors('confirmEmail')}" th:errors="*{confirmEmail}">Confirm Email Error</span>
+    </div>
+
+    <div>
+        <label class="registration-form-label" for="pwd">Password:</label>
+        <input class="registration-form-textarea" type="password" id="pwd" th:field="*{pwd}" required>
+        <span th:if="${#fields.hasErrors('pwd')}" th:errors="*{pwd}">Password Error</span>
+    </div>
+
+    <div>
+        <label class="registration-form-label" for="confirmPwd">Confirm Password:</label>
+        <input class="registration-form-textarea" type="password" id="confirmPwd" th:field="*{confirmPwd}" required>
+        <span th:if="${#fields.hasErrors('confirmPwd')}" th:errors="*{confirmPwd}">Confirm Password Error</span>
+    </div>
+
+    <div>
+        <button class="registration-button"  type="submit">Register</button>
+    </div>
+</form>
+
+
+<!-- footer -->
+<div th:replace="footer :: footer"></div>
+<!-- //footer -->
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" th:href="@{/assets/css/styles.css}" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Playfair+Display:400,700&display=swap">
+
+    <link rel="stylesheet" type="text/css" href="/assets/css/customStyles.css"> <!-- New CSS file for custom styles -->
+
+    <title>Market</title>
+</head>
+
+<body>
+<!-- header -->
+<div th:replace="header :: header"></div>
+<!-- //header -->
+
+
+
+<div >
+
+    <div >
+        <div>
+            <div>
+                <h3>Open Inquiries</h3>
+            </div>
+        </div>
+        <table>
+            <thead >
+            <tr>
+                <th scope="col">Name</th>
+                <th scope="col">Mobile Num</th>
+                <th scope="col">Email</th>
+                <th scope="col">Subject</th>
+                <th scope="col">Message</th>
+                <th scope="col"></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="inquiry: ${inquiriesList}">
+                <td th:text="${inquiry.name}"></td>
+                <td th:text="${inquiry.mobileNum}"></td>
+                <td th:text="${inquiry.email}"></td>
+                <td th:text="${inquiry.subject}"></td>
+                <td th:text="${inquiry.message}"></td>
+                <td><a th:href="@{/closeInquiry(id=${inquiry.inquiryId})}">CLOSE</a></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <div>
+        <a th:href="@{/dash}">
+        <button>BACK</button>
+        </a>
+    </div>
+</div>
+
+<!-- footer -->
+<div th:replace="footer :: footer"></div>
+<!-- //footer -->
+
+</button>
+</body>
+
+</html>

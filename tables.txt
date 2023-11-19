@@ -1,0 +1,93 @@
+CREATE DATABASE Market;
+
+USE Market;
+
+CREATE TABLE IF NOT EXISTS `inquiry` (
+  `inquiry_id` INT AUTO_INCREMENT PRIMARY KEY,
+  `name` VARCHAR(100) NOT NULL,
+  `mobile_num` VARCHAR(10) NOT NULL,
+  `email` VARCHAR(100) NOT NULL,
+  `subject` VARCHAR(100) NOT NULL,
+  `message` VARCHAR(500) NOT NULL,
+  `status` VARCHAR(10) NOT NULL,
+  `created_at` TIMESTAMP NOT NULL,
+  `created_by` VARCHAR(50) NOT NULL,
+  `updated_at` TIMESTAMP DEFAULT NULL,
+  `updated_by` VARCHAR(50) DEFAULT NULL
+);
+
+CREATE TABLE IF NOT EXISTS `roles` (
+  `role_id` INT NOT NULL AUTO_INCREMENT,
+  `role_name` VARCHAR(50) NOT NULL,
+  `created_at` TIMESTAMP NOT NULL,
+  `created_by` VARCHAR(50) NOT NULL,
+  `updated_at` TIMESTAMP DEFAULT NULL,
+  `updated_by` VARCHAR(50) DEFAULT NULL,
+  PRIMARY KEY (`role_id`)
+);
+
+CREATE TABLE IF NOT EXISTS `address` (
+  `address_id` INT NOT NULL AUTO_INCREMENT,
+  `address1` VARCHAR(200) NOT NULL,
+  `address2` VARCHAR(200) DEFAULT NULL,
+  `city` VARCHAR(50) NOT NULL,
+  `state` VARCHAR(50) NOT NULL,
+  `zip_code` INT NOT NULL,
+  `created_at` TIMESTAMP NOT NULL,
+  `created_by` VARCHAR(50) NOT NULL,
+  `updated_at` TIMESTAMP DEFAULT NULL,
+  `updated_by` VARCHAR(50) DEFAULT NULL,
+  PRIMARY KEY (`address_id`)
+);
+
+CREATE TABLE IF NOT EXISTS `user` (
+  `user_id` INT NOT NULL AUTO_INCREMENT,
+  `name` VARCHAR(100) NOT NULL,
+  `email` VARCHAR(50) NOT NULL,
+  `mobile_number` VARCHAR(20) NOT NULL,
+  `pwd` VARCHAR(200) NOT NULL,
+  `role_id` INT NOT NULL,
+  `address_id` INT NULL,
+  `created_at` TIMESTAMP NOT NULL,
+  `created_by` VARCHAR(50) NOT NULL,
+  `updated_at` TIMESTAMP DEFAULT NULL,
+  `updated_by` VARCHAR(50) DEFAULT NULL,
+  PRIMARY KEY (`user_id`),
+  FOREIGN KEY (`role_id`) REFERENCES `roles`(`role_id`),
+  FOREIGN KEY (`address_id`) REFERENCES `address`(`address_id`)
+);
+
+CREATE TABLE `iphoneMobile` (
+    `iphone_id` INT PRIMARY KEY AUTO_INCREMENT,
+    `iphone_name` VARCHAR(255) NOT NULL,
+    `processor` VARCHAR(255) NOT NULL,
+    `camera` VARCHAR(255) NOT NULL,
+    `released` DATE NOT NULL,
+    `screen_size` VARCHAR(255) NOT NULL,
+    `OS` VARCHAR(255) NOT NULL,
+    `notable_feature` VARCHAR(255),
+    `connectivity` VARCHAR(255) NOT NULL,
+    `storage_options` VARCHAR(255) NOT NULL,
+    `battery_life` VARCHAR(255) NOT NULL,
+    `dimensions` VARCHAR(255) NOT NULL,
+    `price` DOUBLE NOT NULL,
+    `img` VARCHAR(255),
+    `max_bid_amount` DOUBLE DEFAULT 0,
+    `created_at` TIMESTAMP NOT NULL,
+    `created_by` VARCHAR(50) NOT NULL,
+    `updated_at` TIMESTAMP DEFAULT NULL,
+    `updated_by` VARCHAR(50) DEFAULT NULL
+);
+
+CREATE TABLE `bid` (
+    `bid_id` INT PRIMARY KEY AUTO_INCREMENT,
+    `user_id` INT NOT NULL,
+    `iphone_id` INT NOT NULL,
+    `bid_amount` DOUBLE NOT NULL,
+    `created_at` TIMESTAMP NOT NULL,
+    `created_by` VARCHAR(50) NOT NULL,
+    `updated_at` TIMESTAMP DEFAULT NULL,
+    `updated_by` VARCHAR(50) DEFAULT NULL,
+    FOREIGN KEY (`user_id`) REFERENCES `user`(`user_id`),
+    FOREIGN KEY (`iphone_id`) REFERENCES `iphoneMobile`(`iphone_id`)
+);

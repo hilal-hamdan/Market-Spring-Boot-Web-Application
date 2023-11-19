@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" th:href="@{/assets/css/styles.css}" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Playfair+Display:400,700&display=swap">
+    <title>Market</title>
+</head>
+
+<body>
+<!-- Header with updated styles -->
+<header>
+    <nav class="header-nav">
+        <ul class="logo-ul" >
+            <a class="navigation-link" th:href="@{/home}" th:text="${'Market'}">Market</a>
+        </ul>
+        <ul class="center-ul">
+            <li><a class="navigation-link" th:href="@{/home}">Home</a></li>
+            <li><a class="navigation-link" th:href="@{/shop}">Shop</a></li>
+            <li><a class="navigation-link" th:href="@{/livebids}">Live Bids</a></li>
+            <li><a class="navigation-link" th:href="@{/contact}">Contact Us</a></li>
+            <li><a class="navigation-link" th:href="@{/developer}">Developer</a></li>
+        </ul>
+        <ul class="user-ul">
+            <li sec:authorize="!isAuthenticated"><a class="navigation-link" th:href="@{/login}">Login</a></li>
+            <li sec:authorize="isAuthenticated"><a class="navigation-link" th:href="@{/dash}">DashBoard</a></li>
+            <li sec:authorize="isAuthenticated"><a class="navigation-link" th:href="@{/logout}">Logout</a></li>
+        </ul>
+    </nav>
+</header>
+</body>
+</html>

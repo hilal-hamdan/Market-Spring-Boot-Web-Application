@@ -1,0 +1,165 @@
+
+body {
+    background: linear-gradient(to right, #b92b27, #1565C0);
+            color: #fdfff5;
+            text-align:center;
+             min-height: 100vh; /* 100% of the viewport height */
+             margin: 0;
+
+}
+/* header styles */
+.header-nav , footer{
+   display: flex;
+   justify-content: space-between;
+   border-style: solid;
+    border-color: #fdfff5;
+}
+
+table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+th,tr{
+border-style: solid;
+    border-color: #fdfff5;
+}
+
+th:first-child,
+        td:first-child {
+            border-left: none;
+        }
+
+        th:last-child,
+        td:last-child {
+            border-right: none;
+        }
+
+
+.navigation-link{
+    color: inherit;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.shop-button:hover,
+.bid-button:hover,
+.userprofile-button:hover,
+.userprofile-back-button:hover,
+.registration-button:hover,
+.login-button:hover,
+.contact-form-button:hover,
+.navigation-link:hover {
+    background:linear-gradient(to right, #b92b27, #1565C0);
+}
+
+.logo-ul, .center-ul, .user-ul {
+    list-style-type: none; /* Remove bullets */
+    padding: 0;
+}
+.logo-ul{
+   flex: 1;
+   text-align: left;
+   padding-left: 1%
+}
+.center-ul{
+    flex: 2;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+}
+.user-ul{
+    flex: 1;
+    text-align: right;
+    padding-right: 1%
+}
+
+/*end header styles*/
+
+/* footer style*/
+footer{
+     position: relative;
+                 bottom: 0;
+                 width: 100%;
+                 padding: 10px;
+
+}
+
+body.less-content .page-container  {
+    padding-bottom: 200px; /* Adjust the value based on your footer height */
+}
+
+.footer.container{
+     display: flex;
+       justify-content: space-between;
+
+}
+.footer-about-us{
+    flex: 1;
+    padding-right: 1%
+}
+.footer-follow-us{
+    flex: 1;
+    padding-right: 1%
+}
+
+
+form{
+max-width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+}
+.registration-form-label,
+.userprofile-form-label,
+.contact-form-label {
+
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+}
+.bid-form-textarea,
+.registration-form-label,
+.userprofile-form-label,
+.userprofile-form-textarea,
+.registration-form-textarea,
+.login-input,
+.contact-form-input,
+.contact-form-textarea {
+    background: linear-gradient(to right, #b92b27, #1565C0);
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin:10px;
+    border: 1px solid #ddd;
+    color: #fdfff5;
+}
+.bid-form-textarea{
+                text-align:center;
+
+}
+
+.shop-button,
+.bid-button,
+.userprofile-button,
+.userprofile-back-button,
+.contact-form-button,
+.login-button,
+.registration-button{
+    background:#fdfff5;
+}
+
+.current-bid{
+    font-size : 30px;
+    color :#FF5733;
+}
+
+
+.home-img{
+width : 90%;
+height : 80%;
+}
+
+.dash-img{
+width: 300px;
+height: 300px;
+}
+
