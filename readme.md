@@ -37,7 +37,7 @@ Insert Data into Tables:
 Execute the data insertion queries (found in tables.txt) to populate the tables with initial data.
 Run the Application:
 
-Start the application, and it will be accessible at http://localhost:8080.
+Start the application, and it will be accessible at http://localhost:8085.
 Login as Admin:
 
 Use the following credentials to log in as an admin:
